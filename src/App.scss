@@ -1,0 +1,127 @@
+.form_value {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.1em;
+
+  form {
+    .form_input {
+      border: none;
+      background-color: whitesmoke;
+      padding: 1em;
+      width: 70vw;
+      border-radius: 0.5em;
+      font-family: 'Courier New', Courier, monospace;
+      transition-duration: 150ms;
+
+      &:focus {
+        border: 2px solid blue;
+        outline: none;
+      }
+
+      &:hover {
+        border: 2px solid blue;
+      }
+    }
+
+    button {
+      padding: 1em;
+      border: none;
+      margin-left: 0.5em;
+      border-radius: 0.5em;
+      background-color: rgb(37, 17, 0);
+      transition-duration: 150ms;
+      width: 10vw;
+      color: white;
+
+      &:hover {
+        background-color: rgb(77, 36, 0);
+      }
+    }
+  }
+}
+
+#header {
+  padding: 1em;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  margin-bottom: 0.6em;
+}
+
+.App {
+  margin: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+
+  #image {
+    #image_container {
+      border-radius: 10px;
+      overflow: hidden;
+
+      #image_source {
+        width: 300px;
+        height: 300px;
+        object-fit: fill;
+      }
+    }
+  }
+
+  #controls {
+    display: flex;
+    flex-direction: column;
+    padding-right: 2em;
+
+    #reset_button {
+      padding: 0.5em;
+      background-color: red;
+      text-align: center;
+      width: 10%;
+      margin-top: 1em;
+      border-radius: 0.5em;
+      color: white;
+      transition-duration: 150ms;
+
+      &:hover {
+        cursor: default;
+        background-color: rgb(255, 120, 120);
+
+      }
+    }
+
+    span {
+      padding: 0.2em;
+      color: rgb(66, 66, 66);
+      font-weight: bold;
+    }
+
+    input[type=range] {
+      width: 40em;
+      padding: 0.20em 0;
+      -webkit-appearance: none;
+
+      &::-webkit-slider-runnable-track {
+        background-color: rgb(218, 217, 255);
+        border-radius: 0.5em;
+        box-shadow: 0.0em 0.5em 0.2em 0.1em rgb(78, 78, 78);
+      }
+
+      &::-webkit-slider-thumb {
+        box-shadow: 0.0em 0.2em 0.1em 0.1em rgb(38, 0, 255);
+        border: solid 2px rgb(38, 0, 255);
+        border-radius: 0.5em;
+        height: 2em;
+        width: 2em;
+        background-color: rgb(255, 255, 255);
+        -webkit-appearance: none;
+        margin-top: -0.5em;
+
+        &:hover {
+          cursor: grab;
+        }
+      }
+    }
+  }
+}
